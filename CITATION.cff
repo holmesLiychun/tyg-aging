@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Decoupling analysis code for composite metabolic indices and biological aging"
+abstract: >-
+  R scripts implementing a three-stage decoupling framework (cross-sectional,
+  longitudinal, Mendelian randomization) to separate algorithmic collinearity
+  from biological association between composite metabolic indices and aging clocks.
+authors:
+  - family-names: Li
+    given-names: Yongchun
+    orcid: "https://orcid.org/0000-0002-9633-1554"   
+  - family-names: Chen
+    given-names: Xiaojun
+    orcid: "https://orcid.org/0009-0000-3523-4577"
+  - family-names: Fan
+    given-names: Manli
+  - family-names: Wang
+    given-names: Hao
+    orcid: "https://orcid.org/0009-0009-9876-0430"
+version: 1.0.0
+date-released: 2026-09-15
+license: MIT
+url: "https://github.com/holmesLiychun/tyg-aging"
+
+preferred-citation:
+  type: article
+  title: "Algorithmic collinearity, not biology? A decoupling framework for composite metabolic indices and biological aging clocks"
+  journal: "BMC Medicine"
+  year: 2026
+  authors:
+    - family-names: Li
+      given-names: Yongchun
+    - family-names: Chen
+      given-names: Xiaojun
+    - family-names: Fan
+      given-names: Manli
+    - family-names: Wang
+      given-names: Hao
