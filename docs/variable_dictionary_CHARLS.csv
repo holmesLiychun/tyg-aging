@@ -1,0 +1,42 @@
+variable_name,label,data_source,unit,coding_notes,type,nhanes_equivalent
+bl_crea,血清肌酐,charls.dta,mg/dL,连续变量,numeric,LBXSCRE
+bl_glu,空腹血糖,charls.dta,mg/dL,连续变量,numeric,LBXGLU
+bl_hbalc,糖化血红蛋白,charls.dta,%,连续变量,numeric,LBXGH
+bl_cho,总胆固醇,charls.dta,mg/dL,连续变量,numeric,LBXTC
+bl_tg,甘油三酯,charls.dta,mg/dL,连续变量; bl_top_coding_tg为截断标记,numeric,LBXTR
+bl_bun,血尿素氮,charls.dta,mg/dL,连续变量,numeric,LBXBUN
+bl_ua,血清尿酸,charls.dta,mg/dL,连续变量,numeric,LBXSUA
+bl_wbc,白细胞计数,charls.dta,10^9/L,连续变量,numeric,LBXWBCSI
+bl_mcv,平均红细胞体积,charls.dta,fL,连续变量,numeric,LBXMCV
+bl_crp,C反应蛋白,charls.dta,mg/L,连续变量; 衍生ln_crp为对数转换,numeric,LBXCRP
+bl_hdl,高密度脂蛋白胆固醇,charls.dta,mg/dL,连续变量,numeric,LBDHDD
+bl_cysc,胱抑素C,charls.dta,mg/L,连续变量,numeric,LBXCYS
+bl_fasting,空腹状态,charls.dta,分类,1=空腹, 2=非空腹,numeric,fasting_code
+bl_hct,红细胞压积,charls.dta,%,连续变量,numeric,LBXHCT
+bl_hgb,血红蛋白,charls.dta,g/dL,连续变量,numeric,LBXHGB
+bl_ldl,低密度脂蛋白胆固醇,charls.dta,mg/dL,连续变量,numeric,LBDLLD
+bl_plt,血小板计数,charls.dta,10^9/L,连续变量,numeric,LBXPLTSI
+bl_top_coding_tg,TG top-coding截断标记,charls.dta,,1=截断(>953.15 mg/dL),numeric,
+gender,性别,charls.dta,,0=女性, 1=男性(与NHANES相反),factor,RIAGENDR
+smokev,吸烟史,charls.dta,,0=无, 1=有,factor,SMQ020
+drinkl,饮酒史,charls.dta,,0=无, 1=有,factor,ALQ120Q
+edu,教育程度,charls.dta,,1=未受教育/小学, 2=初中, 3=高中/中专, 4=大专及以上,factor,DMDEDUC2
+exercise,体育锻炼,charls.dta,,0=无, 1=有,factor,PAQ605
+rural,城乡居住地,charls.dta,,0=城市, 1=农村,factor,
+diabe,糖尿病,charls.dta,,0=无糖尿病, 1=有糖尿病,factor,DIQ010
+systo,收缩压,charls.dta,mmHg,连续变量,numeric,BPXSY1
+bmi,体重指数,charls.dta,kg/m²,连续变量,numeric,BMXBMI
+mwaist,腰围,charls.dta,cm,连续变量,numeric,BMXWAIST
+age,年龄,charls.dta,岁,连续变量,numeric,RIDAGEYR
+wave,调查波次,charls.dta,,1=2011, 2=2013, 3=2015, 4=2018, 5=2020,numeric,
+ID,个体唯一标识,charls.dta,,字符型ID,factor,SEQN
+tyg,TyG指数,衍生(代码生成),无,= ln(tg/2.2 × glu/18),numeric,
+tyg_bmi,TyG-BMI,charls.dta,无,预计算交互项,numeric,
+ln_crp,CRP对数转换,衍生(代码生成),无,= log(bl_crp),numeric,
+tg_hdl_ratio,甘油三酯/HDL比值,衍生(代码生成),无,= bl_tg / bl_hdl,numeric,
+BA_resid_KDM_core6,KDM_core6生物年龄残差,衍生(代码生成),无,正值=偏老, 负值=偏年轻,numeric,
+BA_resid_sex_KDM_core6,性别特异性KDM_core6 BA残差,衍生(代码生成),无,按性别分层计算,numeric,
+death,死亡状态,H_CHARLS_D_Data.dta,分类,0=删失(存活), 1=死亡,factor,MORTSTAT
+fu_years,随访时间(年),H_CHARLS_D_Data.dta,年,从基线访谈到死亡/末次随访,numeric,
+cvd_death,心血管死亡,H_CHARLS_EOL_a.dta,分类,0=否, 1=是(ragcod==2),factor,UCOD_LEADING
+cancer_death,癌症死亡,H_CHARLS_EOL_a.dta,分类,0=否, 1=是(ragcod==1),factor,UCOD_LEADING
