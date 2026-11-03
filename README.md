@@ -1,11 +1,11 @@
 # Decoupling Framework for Composite Metabolic Indices and Biological Aging
 
-Analysis code for BMC Medicine submission:  
-"Algorithmic collinearity, not biology? A decoupling framework for composite metabolic indices and biological aging clocks"
+Analysis code for Cardiovascular Diabetology submission:  
+"Decoupling shared components in composite metabolic indices and biological aging clocks: a triangulation analysis of TyG index for CKM risk stratification"
 
 ## Analysis Plan
 
-Lock date: 2026-09-15 (pre-specified; no post-hoc modification)
+All model specifications were predefined prior to final analysis and are documented in the Supplementary Materials.
 
 ## Repository Structure
 
@@ -31,14 +31,16 @@ Place authorized files in `data/raw/` (git-ignored). Synthetic data in `data/exa
 - Session info: `sessionInfo.txt`
 
 ## Run Order
+
 NHANES (cross-sectional)
 source("code/NHANES/00_main_NHANES.R")
+
 CHARLS (longitudinal)
 source("code/CHARLS/00_run_all_CHARLS.R")
+
 MR
 source("code/MR/MR_analysis_v3.R")
 source("code/MR/mvmr_fg_tg_phenoage.R")
-## Output Map
 
 ## Output Map — NHANES
 
